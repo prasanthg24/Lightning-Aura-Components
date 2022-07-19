@@ -1,0 +1,11 @@
+<aura:application  extends="force:slds" >
+    <!--  <c:AuraFirstComponent1> </c:AuraFirstComponent1>
+       <c:AttributeExample></c:AttributeExample>
+  		{!con.Lastname}<br/>
+        {!con.email} {!con.phone}<br/>
+		<c:contactList> </c:contactList>
+	-->
+    <c:Batch1FristComponent></c:Batch1FristComponent>
+    
+    
+</aura:application>
