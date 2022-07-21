@@ -1,0 +1,24 @@
+({
+    doInit : function(component, event, helper)
+    {
+        var action = component.get("c.getContactList");
+          //console.log(action);
+        
+        //setCallback (Object scope, function callback, String name)
+        action.setCallback (this,
+                            
+                            function(response)
+                                {
+                                    var responsevalue  =  response.getReturnValue(); 
+                                   // <aura:attribute name ="ContactList" type ="Contact[]"/>
+                                    component.set('v.ContactList',responsevalue);
+                                    //console.log(responsevalue);
+                                    
+                                }
+                           
+                           );
+        
+        $A.enqueueAction(action,false);
+        ///$A.enqueueAction(action);
+    }
+})
