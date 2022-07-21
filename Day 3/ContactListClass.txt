@@ -1,0 +1,10 @@
+public class ContactListController {
+    @AuraEnabled
+    public static List<Contact> getContactList()
+    {
+        List<Contact> conlist = [SELECT Id, Name, Department, Phone, Email FROM Contact WHERE Email!= Null LIMIT 10];
+        return conList;
+        
+    }
+    
+}
