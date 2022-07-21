@@ -1,0 +1,38 @@
+    <aura:component  controller  ="ContactListController"  >
+     
+        <aura:attribute name ="ContactList" type ="Contact[]"/>
+        
+        
+        <aura:handler name="init" value ="{!this}" action = "{!c.doInit}"/>
+    
+    
+         <aura:iteration items="{!v.ContactList}" var="item">
+          		{!item.Name}     {!item.Phone}
+             	<br/>
+             {!item.Department}<br/>
+             {!item.Email}<br/>
+             	
+         </aura:iteration>
+    
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      <!--  <aura:iteration  items="{!v.ContactList}" var ="con"> 
+            <lightning:card class="slds-p-around_medium" iconName="standard:contact">
+                {!con.FirstName}  &nbsp;  	 {!con.LastName} <br/>
+                {!con.Phone}    &nbsp; <br/>
+                {!con.Email}
+            </lightning:card>     
+        </aura:iteration>-->
+        
+        
+    </aura:component>
