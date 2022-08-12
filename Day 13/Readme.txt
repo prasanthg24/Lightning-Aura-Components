@@ -1,1 +1,2 @@
 BeerListComponent
+BeerDetail Component
